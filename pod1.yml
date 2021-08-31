@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata : 
+  name: pod2
+  labels: 
+    app: ng-watch
+spec:
+  containers:
+  - name: nginx01
+    image: nginx
+    ports:
+    - name: nginx-port
+      containerPort: 80
+  - name: watcher
+    image: afakharany/watcher
+    ports:
+    - name: watcher-port
